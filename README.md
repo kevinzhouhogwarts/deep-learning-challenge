@@ -25,4 +25,9 @@ nn.add(tf.keras.layers.Dense(units=8, activation="relu", input_dim=42))
 nn.add(tf.keras.layers.Dense(units=2, activation="relu"))
 
 ### Activation Function
-First, because the output is binary, the activation function of the output layer was changed from ReLU to Sigmoid.
+First, because the output is binary, the activation function of the output layer was changed from ReLU to Sigmoid. This also did not have a significant impact on the accuracy.
+
+Output layer:
+nn.add(tf.keras.layers.Dense(units=1, activation="sigmoid"))
+
+Then, replacing the input layer's ReLU function with LeakyReLU and ELU was attempted.
