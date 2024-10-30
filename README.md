@@ -1,8 +1,7 @@
-# deep-learning-challenge
+# Deep Learning Challenge
 
-##
+## Introduction
 The first draft of the neural network model was created in AlphabetSoupCharity_Initial and its output was saved to AlphabetSoupCharity.h5.
-
 After optimization in AlphabetSoupCharity_Optimization.ipynb, an optimized model was saved to AlphabetSoupCharity_Optimization.h5.
 
 
@@ -35,7 +34,12 @@ Then, replacing the first and second hidden layers' ReLU function with LeakyReLU
 I would have liked to check the activation outputs of each layer in order to check for dead neurons, but was unable to successfully do that. However, since LeakyReLU and ELU did not make a difference, it's possible dead neurons was not an issue.
 
 ### Drop Columns Using PCA
-Next, PCA was applied to the scaled/quantized dataset in order to identify several nonlinearly-related components to represent the original data. After viewing the elbow curve of cumulative explained variance versus the number of components, a principal component number of 34 was selected:
+Next, PCA was applied to the scaled/quantized dataset in order to identify several nonlinearly-related components to represent the original data. After viewing the elbow curve of cumulative explained variance versus the number of components, a principal component number of 34 was selected. At the same time, the input dimensions of the model had to be changed to match.
+
 ![image](https://github.com/user-attachments/assets/62739b8f-cce1-4f51-a803-5b192a2ac3b5)
 
 However, after refitting the model using the PCA training subset of 34 components, the accuracy was not significantly impacted.
+
+At this point, a diverse array of options have been attempted. Perhaps hyperparameter optimization may be attempted.
+
+## Conclusions
