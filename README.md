@@ -60,7 +60,7 @@ I would have liked to check the activation outputs of each layer in order to che
 ### Streamline Columns Using PCA
 Next, PCA was applied to the scaled/quantized dataset in order to identify several nonlinearly-related components to represent the original data. After viewing the elbow curve of cumulative explained variance versus the number of components, a principal component number of 34 was selected. At the same time, the input dimensions of the model had to be changed to match.
 
-![image](https://github.com/user-attachments/assets/62739b8f-cce1-4f51-a803-5b192a2ac3b5)
+![Alt text]("\Resources\pca_elbow_curve.png")
 
 However, after refitting the model using the PCA training subset of 34 components, the accuracy was not significantly impacted.
 
